@@ -34,11 +34,11 @@ objs := kpm_audit_patch.o
 all: kpm_audit_patch.kpm
 
 kpm_audit_patch.kpm: ${objs}
-	${CC}  $(LDFLAGS)  -r -o $@ $^
+	${CC}  $(LDFLAGS) -Tkpm_audit_patch.lds -r -o $@ $^
 	${STRIP} -g --strip-unneeded --strip-debug --remove-section=.comment --remove-section=.note.GNU-stack $@
 
 %.o: %.c
-	${CC} $(CFLAGS) $(INCLUDE_FLAGS)  -Tkpm_audit_patch.lds -c -O2 -o $@ $<
+	${CC} $(CFLAGS) $(INCLUDE_FLAGS) -c -O2 -o $@ $<
 
 
 .PHONY: clean
