@@ -6,7 +6,7 @@
 #include <linux/kernel.h>
 
 KPM_NAME("AuditPatch KPM");
-KPM_VERSION("v0.0.2");
+KPM_VERSION("v0.0.3");
 KPM_LICENSE("GPL v3");
 KPM_AUTHOR("Bruno Ancona");
 KPM_DESCRIPTION("Replace sensitive context in audit log");
